@@ -26,6 +26,10 @@ $(NAME): $(PS_OBJS)
 	$(MAKE) -C ./libft --silent
 	$(CC) -o $(NAME) $(PS_OBJS) -L./libft -lft
 
+$(CH_NAME): $(CH_OBJS)
+	$(MAKE) -C ./libft --silent
+	$(CC) -o $(CH_NAME) $(CH_OBJS) -L./libft -lft
+
 all : $(NAME)
 
 clean :
@@ -38,9 +42,7 @@ fclean : clean
 	rm -rf $(NAME)
 	rm -rf $(CH_NAME)
 
-bonus : $(CH_OBJS)
-	$(MAKE) -C ./libft --silent
-	$(CC) -o $(CH_NAME) $(CH_OBJS) -L./libft -lft
+bonus : $(CH_NAME)
 
 re : fclean all
 

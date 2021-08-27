@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tvader <tvader@student.21-school.ru>       +#+  +:+       +#+        */
+/*   By: tvader <tvader@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 23:03:16 by tvader            #+#    #+#             */
-/*   Updated: 2021/08/25 18:13:59 by tvader           ###   ########.fr       */
+/*   Updated: 2021/08/27 12:31:23 by tvader           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include "./libft/libft.h"
-# define BS 102400
+# define BS 6
 typedef struct s_s
 {
 	int			val;
@@ -27,7 +27,6 @@ int		check_args(int cnt, char **args);
 void	clearing(t_s *a, t_s *b, int ret);
 t_s		*creation(int new_value);
 void	error(void);
-void	execute(char *buf, t_s **a, t_s **b);
 void	exec_com(char *com, t_s **a, t_s **b);
 int		is_sorted(t_s *stack);
 int		is_in_stack(t_s *a, int value);

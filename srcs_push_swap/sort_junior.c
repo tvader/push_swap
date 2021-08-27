@@ -6,7 +6,7 @@
 /*   By: tvader <tvader@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 21:07:54 by tvader            #+#    #+#             */
-/*   Updated: 2021/08/21 23:34:39 by tvader           ###   ########.fr       */
+/*   Updated: 2021/08/27 11:07:31 by tvader           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,11 @@ int	is_place_asc(int value, t_s *stack, t_s *cur)
 int	where_to_ins_asc(int value, t_s *stack)
 {
 	int	moves;
-	int	size;
 	t_s	*cur;
 
 	if (!stack || !(stack->next))
 		return (0);
 	moves = 1;
-	size = stack_size(stack);
 	cur = stack;
 	if (value < min_value(stack))
 		moves = moves_to_val(min_value(stack), stack);

@@ -6,7 +6,7 @@
 /*   By: tvader <tvader@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 14:42:04 by tvader            #+#    #+#             */
-/*   Updated: 2021/08/21 23:34:37 by tvader           ###   ########.fr       */
+/*   Updated: 2021/08/27 11:07:00 by tvader           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,13 +71,11 @@ int	moves_to_val(int value, t_s *stack)
 int	where_to_ins(int value, t_s *stack)
 {
 	int	moves;
-	int	size;
 	t_s	*cur;
 
 	if (!stack || !(stack->next))
 		return (0);
 	moves = 1;
-	size = stack_size(stack);
 	cur = stack;
 	if (value > max_value(stack))
 		moves = moves_to_val(max_value(stack), stack);
