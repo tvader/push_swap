@@ -1,3 +1,4 @@
 #!/bin/bash
-ARG=`./gen.py 100`; ../push_swap $ARG | ../checker $ARG;
-../push_swap $ARG | wc -l
+ARG=`./gen.py 500`; ../push_swap $ARG > resps;  < resps ../checker $ARG;
+< resps wc -l
+rm resps
