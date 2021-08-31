@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_creation.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tvader <tvader@student.21-school.ru>       +#+  +:+       +#+        */
+/*   By: tvader <tvader@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 20:52:19 by tvader            #+#    #+#             */
-/*   Updated: 2021/08/25 19:15:51 by tvader           ###   ########.fr       */
+/*   Updated: 2021/08/31 11:08:14 by tvader           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ t_s	*read_stack(int cnt, char **args)
 			is_in_stack(a, (int)(*num)) || push_back((int)(*num), &a))
 			{
 				clearing(a, NULL, 1);
+				free(num);
 				error();
 			}
 			free(num);
@@ -100,7 +101,7 @@ int	check_args(int cnt, char **args)
 	int	j;
 
 	if (cnt <= 1)
-		error();
+		exit(0);
 	i = 1;
 	j = 0;
 	while (i < cnt)
